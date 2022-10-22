@@ -26,7 +26,7 @@ public class Login extends NewClass {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 371, Short.MAX_VALUE)
+            .addGap(0, 417, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
