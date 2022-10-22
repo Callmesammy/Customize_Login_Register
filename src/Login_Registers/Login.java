@@ -4,10 +4,10 @@ package Login_Registers;
 import Componentt.NewClass;
 
 
-public class Register extends NewClass {
+public class Login extends NewClass {
 
     
-    public Register() {
+    public Login() {
         initComponents();
     }
 
@@ -16,7 +16,7 @@ public class Register extends NewClass {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(43, 40, 40));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -26,7 +26,7 @@ public class Register extends NewClass {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
+            .addGap(0, 371, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
