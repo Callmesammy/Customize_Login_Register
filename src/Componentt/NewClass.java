@@ -20,8 +20,7 @@ public class NewClass extends JComponent{
         g2.setColor(getBackground());
         g2.fill(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 10, 10));
         g2.dispose();
-        super.paintComponent(g); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
+        super.paintComponent(g);    }
 
    
     
