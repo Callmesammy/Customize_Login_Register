@@ -33,7 +33,17 @@ public class Login_Register extends javax.swing.JPanel {
         System.out.println(animate);
       layout.setComponentConstraints(log, "pos  (50%)-290px-"+animate+" 0.5al n n");
       layout.setComponentConstraints(reg, "pos  (50%)-10px+"+animate+" 0.5al n n");
-      revalidate();
+     
+        if (animate ==30) {
+            if (isstart) {
+                   setComponentZOrder(log, 0);
+        }else{
+            setComponentZOrder(reg, 0);
+        } 
+        
+            }
+         
+        revalidate();
     }
     public Login_Register() {
         initComponents();
