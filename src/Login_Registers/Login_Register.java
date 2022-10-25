@@ -4,83 +4,95 @@ package Login_Registers;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
 import org.jdesktop.animation.timing.interpolation.PropertySetter;
 
+/**
+ *
+ * @author user
+ */
+public class Login_Register extends javax.swing.JPanel {
 
-public class Log_Reg extends javax.swing.JPanel {
-
-    private static Color main = new Color (240,210,205);
+    
+    //here we attacch the login and register age Mglaout\
+    
+    private MigLayout layout;
     private Login log;
     private Register reg;
-    private MigLayout layout;
-    private Animator animat;
-    private boolean isLoading;
+    private boolean isstart;
+    private Animator animator;
    
-    public void minate(int animate){
-        layout.setComponentConstraints(reg, "pos (50%)-290px-" +animate+" 0.5al n n");
-        layout.setComponentConstraints(log, "pos (50%)-10px+" +animate+" 0.5al n n");
-        revalidate();
+//    JPanel panel = new JPanel();
+    private final static Color cl = new Color(205,234,205);
+    
+    public void setAnimate(int animate){
+        System.out.println(animate);
+      layout.setComponentConstraints(log, "pos  (50%)-290px-"+animate+" 0.5al n n");
+      layout.setComponentConstraints(reg, "pos  (50%)-10px+"+animate+" 0.5al n n");
+      revalidate();
     }
-    public Log_Reg() {
+    public Login_Register() {
         initComponents();
         init();
-        setAnimation();
+        initAnimate();
     }
     
-    public void init(){
-        setBackground(main);
-        layout = new MigLayout("fill", "fill", "fill");
-        setLayout(layout);
-        log = new Login();
-        reg = new Register();
-        add(reg, "pos (50%)-290px 0.5al n n ");
-        add(log, "pos (50%)-10px 0.5al n n ");
-       
-    }
-    
-    public void setAnimation(){
-        animat = new Animator(1500, new TimingTargetAdapter(){
+    public void initAnimate(){
+        animator = new Animator(1000, new TimingTargetAdapter(){
             @Override
             public void timingEvent(float fraction) {
-                
+              
             }
         
         });
-        animat.addTarget(new PropertySetter(this, "animate", 0,30,0));
-        animat.setResolution(0);
-//        animate.setAcceleration(0.5f);
-//        animate.setDeceleration(0.5f);
-         reg.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                if (SwingUtilities.isLeftMouseButton(e)) {
-                    loading(false);
-                }
-            }
-        });
-         log.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                if (SwingUtilities.isLeftMouseButton(e)) {
-                    loading(true);
-                }
-            }
-        });
+        animator.addTarget(new PropertySetter(this, "animate", 0,30,0));
+        animator.setResolution(0);
+        
     }
-
-    private void loading(boolean slie){
-        if (slie != isLoading) {
-            if (!animat.isRunning()) {
-                isLoading = slie;
-                animat.start();
+    private void init(){
+        setBackground(cl);
+        layout = new MigLayout("fill", "fill", "fill");
+        log = new Login();
+        reg = new Register();
+        setLayout(layout);
+        add(log, "pos (50%)-290px 0.5al n n");
+        add(reg, "pos (50%)-10px 0.5al n n");
+        log.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    slidingadd(false);
+                    
+                }
             }
+        });
+        reg.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    slidingadd(true);
+                    
+                }
+            }
+        });
+       }
+     
+    private void slidingadd (boolean show){
+        if (show != isstart) {
+            if (!animator.isRunning()) {
+                isstart = show;
+                animator.start();
+            }
+            
         }
     }
-  
+    
+
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

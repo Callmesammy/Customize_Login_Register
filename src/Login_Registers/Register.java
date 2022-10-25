@@ -1,10 +1,15 @@
 
 package Login_Registers;
 
-import Componentt.NewClass;
+import Componentt.Panel_Component;
 
+/**
+ *
+ * @author user
+ */
 
-public class Register extends NewClass {
+// here we extend the Panel_component segments and remove the JPael
+public class Register extends Panel_Component{
 
     
     public Register() {
@@ -16,17 +21,17 @@ public class Register extends NewClass {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(43, 40, 40));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 305, Short.MAX_VALUE)
+            .addGap(0, 294, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 467, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
