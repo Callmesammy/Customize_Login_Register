@@ -36,9 +36,9 @@ public class Login_Register extends javax.swing.JPanel {
      
         if (animate ==30) {
             if (isstart) {
-                   setComponentZOrder(log, 0);
+                   setComponentZOrder(reg, 0);
         }else{
-            setComponentZOrder(reg, 0);
+            setComponentZOrder(log, 0);
         } 
         
             }

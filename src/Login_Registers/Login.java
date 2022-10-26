@@ -30,6 +30,7 @@ public class Login extends Panel_Component{
         setBackground(new java.awt.Color(44, 43, 43));
 
         imageAvatar1.setBorderSize(2);
+        imageAvatar1.setImage(new javax.swing.ImageIcon(getClass().getResource("/Swing_Components/icon.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
