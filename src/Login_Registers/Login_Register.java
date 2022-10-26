@@ -55,7 +55,9 @@ public class Login_Register extends javax.swing.JPanel {
         animator = new Animator(1000, new TimingTargetAdapter(){
             @Override
             public void timingEvent(float fraction) {
-              
+                if (isstart) {
+                    log.getSetAlpha(fraction);
+                }
             }
         
         });
