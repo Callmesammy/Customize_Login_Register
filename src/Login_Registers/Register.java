@@ -1,7 +1,7 @@
 
 package Login_Registers;
 
-import Componentt.Panel_Component;
+import Swing_Components.Panel_Component;
 
 /**
  *
